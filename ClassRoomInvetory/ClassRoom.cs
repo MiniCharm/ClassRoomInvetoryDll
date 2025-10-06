@@ -29,12 +29,12 @@ namespace ClassRoomInvetory
             {
                 throw new ArgumentException("The classRoom needs a name");
             }
-            if (name.Length<3||name.Length>55)
+            if (name.Length<3||name.Length>20)
             {
-                throw new ArgumentException("The name must be between 3 and 55 charecters");
+                throw new ArgumentException("The name must be between 3 and 20 charecters");
             }
             Name = name;
-            if(chairs < 0||tables<0)
+            if(chairs < 1||tables<5)
             {
                 throw new ArgumentException("A classroom must have chairs and tables");
             }
