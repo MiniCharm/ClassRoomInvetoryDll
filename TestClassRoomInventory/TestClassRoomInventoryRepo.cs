@@ -22,6 +22,20 @@ namespace TestClassRoomInventory
         }
 
         [TestMethod]
+        public void GetOrderByName() 
+        {
+            //Arrange
+            ClassRoominvetoryReposetory CR = new ClassRoominvetoryReposetory();
+            List<ClassRoom> rooms = CR.GetAll();
+
+            //Act
+            List<ClassRoom> orderdList = CR.Get(null, null, null, null, "name");
+
+            //Assert
+            Assert.AreNotEqual(rooms, orderdList);
+        }
+
+        [TestMethod]
         public void ClassRoomAdd()
         {
             //Arrange
