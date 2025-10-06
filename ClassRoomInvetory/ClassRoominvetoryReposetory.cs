@@ -8,7 +8,8 @@ namespace ClassRoomInvetory
 {
     public class ClassRoominvetoryReposetory
     {
-        private List<ClassRoom> _classRooms = new List<ClassRoom>();
+        private List<ClassRoom> _classRooms = new List<ClassRoom> { new (1, "Malaga", 25, 9, 1, 1), new (2, "Valencia", 25, 9, 1, 1) };
+  
         private int _nextid;
 
         public int Count { get { return _classRooms.Count(); } }
